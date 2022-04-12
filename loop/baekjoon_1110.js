@@ -16,10 +16,10 @@
 // 출력
 // 첫째 줄에 N의 사이클 길이를 출력한다.
 
-// const fs = require("fs");
-// const [n] = fs.readFileSync("/dev/stdin").toString().split("\n").map(Number);
+const fs = require("fs");
+const [n] = fs.readFileSync("/dev/stdin").toString().split("\n").map(Number);
 
-const n = 26;
+// const n = 26;
 
 let num = +`${n % 10}${n
   .toString()
