@@ -1,0 +1,23 @@
+{
+  "name": "algo",
+  "version": "1.0.0",
+  "description": "![wakatime](https://wakatime.com/badge/github/lxxonx/algorithm.svg) [![Solved.ac프로필](http://mazassumnida.wtf/api/generate_badge?boj=leeon)](https://solved.ac/leeon)",
+  "main": "algo.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lxxonx/algorithm.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lxxonx/algorithm/issues"
+  },
+  "homepage": "https://github.com/lxxonx/algorithm#readme",
+  "dependencies": {
+    "nodemon": "^2.0.19"
+  }
+}
