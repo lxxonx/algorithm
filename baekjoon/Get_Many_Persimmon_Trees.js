@@ -16,12 +16,24 @@ const createGraph = (length, mapSize, coords) => {
 };
 
 const findStars = (graph, size) => {
-  const [width, height] = mapSize.split(" ").map(Number);
+  const [width, height] = size.split(" ").map(Number);
   const stars = [];
 
-  for (let i = 0; i < height; i++) {
-    for (let j = 0; j < width; j++) {}
+  for (let i = 0; i <= graph.length - height; i++) {
+    for (let j = 0; j <= graph[i].length - width; j++) {
+      let count = 0;
+      for (let k = i; k < i + height; k++) {
+        for (let l = j; l < j + width; l++) {
+          if (graph[k][l]) {
+            count++;
+          }
+        }
+        stars.push(count);
+      }
+    }
   }
+
+  return Math.max(...stars);
 };
 
 let i = 0;
@@ -33,7 +45,7 @@ while (input[i] !== "0") {
 
   const size = input[i + 2 + length];
 
-  console.log(graph);
+  console.log(findStars(graph, size));
 
   i += 3 + length;
 }
