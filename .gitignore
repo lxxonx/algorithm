@@ -1,4 +1,4 @@
 
 node_modules
 .cph
-./**/*.bin
+*.bin
