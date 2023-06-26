@@ -1,10 +1,18 @@
 const fs = require("fs");
-const [num, ...str] = fs
-  .readFileSync("/dev/stdin")
-  .toString()
-  .trim()
-  .split("\n");
+const [a, b] = fs.readFileSync("/dev/stdin").toString().trim().split(" ");
 
-for (let i = 0; i < num; i++) {
-  console.log(`${str[i][0]}${str[i][str[i].length - 1]}`);
+const diff = b.length - a.length;
+
+let min = Infinity;
+
+for (let i = 0; i <= diff; i++) {
+  let temp = 0;
+  for (let j = 0; j < a.length; j++) {
+    if (a.charAt(j) !== b.charAt(j + i)) {
+      temp++;
+    }
+  }
+  min = Math.min(min, temp);
 }
+
+console.log(min);
