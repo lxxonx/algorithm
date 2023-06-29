@@ -1,0 +1,7 @@
+-- https://school.programmers.co.kr/learn/courses/30/lessons/59411
+SELECT i.ANIMAL_ID, i.NAME
+FROM ANIMAL_INS i
+JOIN ANIMAL_OUTS o
+ON i.ANIMAL_ID = o.ANIMAL_ID
+ORDER BY DATEDIFF(o.DATETIME, i.DATETIME) DESC
+LIMIT 2;
