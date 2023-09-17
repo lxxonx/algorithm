@@ -16,7 +16,6 @@ const check = (num) => {
       return false;
     }
   }
-
   return true;
 };
 
