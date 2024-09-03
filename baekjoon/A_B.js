@@ -3,6 +3,6 @@ const [a, b] = require("fs")
   .toString()
   .trim()
   .split("\n")
-  .map((v) => +v);
+  .map(BigInt);
 
-console.log(a + b);
+console.log((a + b).toString());
